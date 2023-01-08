@@ -1,0 +1,170 @@
+.products__cart2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  background-color: aquamarine;
+}
+.products__img-block2{
+  display: flex;
+  align-items: center;
+}
+.title2{
+  
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+
+color: #262626;
+
+}
+.remove{
+  padding: 5px 8px;
+} 
+.add{
+  padding: 5px 8px;
+} 
+
+.footer-list {
+  background: #BCDDFE;
+  display: flex;
+  align-items: center;
+
+}
+
+.footer-text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  color:black;
+  width: 391px;
+  padding-bottom: 31px;
+}
+
+.footer-sub-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: black;
+  width: 391px;
+  padding-bottom: 113px;
+
+}
+
+.footer-sub-img {
+  width: 130px;
+  padding-bottom: 21px;
+}
+
+.footer-title {
+  width: 92px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 60px;
+  color: black;
+}
+
+.footer-last-text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 38px;
+  color: black;
+  display: block;
+}
+
+.footer-item,
+.footer-block {
+  /* padding-bottom: 30px; */
+  /* padding-left: 2250px; */
+  margin: 0 auto;
+}
+
+.footer-item {
+  margin-left: 80px;
+  margin-top: 100px;
+}
+
+.footer-sub-img {
+  padding-top: 10px;
+}
+
+
+.div_home_box{
+  width: 385px;
+  height: 310px;
+  margin: 0 auto;
+}
+.div_home_content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+margin-bottom: 30px;
+}
+
+
+.div_text{
+  font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+color: #262626;
+}
+
+.div_counts{
+  font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+color: #262626;
+}
+
+
+
+
+
+.div_text1{
+  font-weight: 500;
+font-size: 30px;
+line-height: 45px;
+color: #22262A;
+}
+
+.div_home_content1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 24px 0;
+}
+
+
+
+
+
+.div_counts1{
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 45px;
+  color: #22262A;
+}
+
+
+.home_btn{
+  width: 100%;
+  font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+color: #FFFFFF;
+background-color: #33A0FF;
+padding: 18px 0;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+
+}
+.delete{
+  width: 40px;
+  height: 40px;
+}
