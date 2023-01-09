@@ -25,7 +25,7 @@ function etr(title) {
   for(let i = 0; i < item.title.length;i++){
         
     if (item.title.length > 40) {
-      let tg = item.title.slice(i,10,"...")
+      let tg = item.title.slice(i,30,"...")
       console.log(tg);
       return tg
     }else{
@@ -42,7 +42,7 @@ function etr(title) {
        <button  class = "favorit"> <img id = ${item.id} class="header__icon" src="./img/cart.png" alt="cart"></button>
      </div>
         <div class = "product__content">
-        <p class = "title">${(item.title)}...</p>
+        <p class = "title">${etr(item.title)}...</p>
         <p class = "raiting">${item.rating.rate}⭐⭐⭐⭐</p>
         <span class = "price">$${(item.price-(item.price/100*24)).toFixed(2)}<span>
 
