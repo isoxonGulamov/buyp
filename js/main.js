@@ -25,7 +25,7 @@ function etr(title) {
   for(let i = 0; i < item.title.length;i++){
         
     if (item.title.length > 40) {
-      let tg = item.title.slice(i,30,"...")
+      let tg = item.title.slice(i,10,"...")
       console.log(tg);
       return tg
     }else{
