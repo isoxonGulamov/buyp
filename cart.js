@@ -3,6 +3,7 @@ let box = document.querySelector(".hero__box3")
 
 function renderBuy() {
   let mahsulot = JSON.parse(localStorage.getItem("products"))
+  let sd = mahsulot
   let count = 1
   box.addEventListener("click",(e)=>{
   if (e.target.className.includes("add")) {
@@ -35,24 +36,54 @@ function renderBuy() {
    
     }
      }
-  }else if(e.target.className.includes("delete")){
-   console.log(e.target.className);
-   for(let i = 0; i < mahsulot.length;i++){
-    if(e.target.id == mahsulot[i].id){
-      mahsulot.splice(i,1) 
-     
-    }
-}
+  } else if (e.target.className.includes("delete")) {
+
+    mahsulot.map((item)=>{
+      if (e.target.id == item.id) {
+        
+        for(let i = 0; i < mahsulot.length;i++){
+          if(e.target.id == mahsulot[i].id){
+       let qolg =   mahsulot.splice(i,1) 
+
+            localStorage.removeItem("products",qolg)
+            console.log(mahsulot);
+            box.innerHTML = ""
+            box.innerHTML = mahsulot.map((item)=>{
+   
+              return `
+              <div class = "products__cart2">
+              <div class = "products__img-block2">
+              <button  class = "delete">  <img id = ${item.id} class="delete" src="./img/delete.png" alt="asd"></button>
+         
+              <img class="product__img" src="${item.image}" alt="asd">
+                  
+              <p class = "title2">${(item.title)}...</p>
+              </div>
+                 <div class = "product__content2">
+                 <button id = ${item.id}  class = "remove">-</button>${count}<button  id = ${item.id} class = "add">+</button>
+         
+                 <span class = "price">$${(item.price-(item.price/100*24)).toFixed(2)}<span>
+                 </div>
+               </div>
+              `
+              
+             }).join("")
+          }
+      }
+
+          
+      }
+    })
+
 
   }
   })
     box.innerHTML = mahsulot.map((item)=>{
-      
-
+   
      return `
      <div class = "products__cart2">
      <div class = "products__img-block2">
-     <button id = ${item.id} class = "delete">  <img class="delete" src="./img/delete.png" alt="asd"></button>
+     <button  class = "delete">  <img id = ${item.id} class="delete" src="./img/delete.png" alt="asd"></button>
 
      <img class="product__img" src="${item.image}" alt="asd">
          
@@ -70,7 +101,6 @@ function renderBuy() {
 }
 
 renderBuy()
-
 
 
 
